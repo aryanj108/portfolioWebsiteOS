@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import DesktopIcon from "./DesktopIcon";
 import Window from "./Window";
-import { AboutContent, ProjectsContent, ContactContent, ResumeContent, MyComputerContent } from "./WindowContents";
+import { AboutContent, ProjectsContent, ContactContent, ResumeContent } from "./WindowContents";
+import Home from '../apps/showcase/Home';
 
 export default function Desktop() {
   const [time, setTime] = useState(new Date());
@@ -49,7 +50,7 @@ export default function Desktop() {
     <div style={{
       width: '100vw',
       height: '100vh',
-      background: '#008080',
+      background: '#3e9697',
       position: 'relative',
       overflow: 'hidden'
     }}>
@@ -65,8 +66,8 @@ export default function Desktop() {
       }}>
         <DesktopIcon 
           icon="/icons/folder.svg" 
-          label="My Computer" 
-          onDoubleClick={() => openWindow('My Computer', <MyComputerContent />)}
+          label="My Showcase" 
+          onDoubleClick={() => openWindow('My Showcase', <Home />, '860px')}
         />
         <DesktopIcon 
           icon="/icons/folder.svg" 
